@@ -1,0 +1,34 @@
+{
+  "name": "AThwab",
+  "version": "1.0",
+  "description": "Build an Extension with Angular",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "webNavigation",
+    "storage",
+    "scripting",
+    "audio"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "./audio/notification-sound.mp3"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "host_permissions": [
+      "<all_urls>"
+    ]
+  }
+}
